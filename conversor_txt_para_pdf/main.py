@@ -53,7 +53,7 @@ class Tela:
                     arquivo = lista_arquivos[item]
                     caminho_nome = caminho_pasta + "/" + arquivo
                     nomePDF = arquivo.split('.')
-                    if len(nomePDF) <= 1:
+                    if len(nomePDF) <= 1 or nomePDF[len(nomePDF)-1] != "txt":
                         continue
                     nomePDF = nomePDF[0]
                     file = open(caminho_nome, "r")
