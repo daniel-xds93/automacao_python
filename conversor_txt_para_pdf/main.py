@@ -37,12 +37,16 @@ class Tela:
 
                 pdf = FPDF()
                 pdf.add_page()
+
+                arquivo_res = file
                         
-                for text in file:
-                    pdf.set_font("Arial",size=15) # For paragraph text
-                    pdf.cell(w=0,h=10,txt=f'{text}',align="L")
-                    nomePDF = caminho_pasta + "/" + nomePDF + '.pdf'
-                    pdf.output(nomePDF)   
+                for text in arquivo_res:
+                    pdf.set_font("Arial",size=12) # For paragraph text
+                    pdf.cell(w=0,h=10,txt=f'{text}', ln=1, align="L")
+                    
+                nomePDF = caminho_pasta + "/" + nomePDF + '.pdf'
+                
+                pdf.output(nomePDF)   
 
             if lista_arquivos and caminho_pasta:
                 for item in range(len(lista_arquivos)):
