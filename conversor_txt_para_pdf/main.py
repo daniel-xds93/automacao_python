@@ -59,8 +59,9 @@ class Tela:
                     arquivo = lista_arquivos[item]
                     caminho_nome = caminho_pasta + "/" + arquivo
                     nomePDF = arquivo.split('.')
+                    ext_arquivo = nomePDF[len(nomePDF)-1]
                     
-                    if len(nomePDF) <= 1 or nomePDF[len(nomePDF)-1] != "txt":
+                    if len(nomePDF) <= 1 or ((ext_arquivo != "txt") and (ext_arquivo != "log") and (ext_arquivo != "csv")):
                         continue
                     
                     file = open(caminho_nome, "r")
