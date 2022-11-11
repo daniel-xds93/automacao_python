@@ -45,7 +45,9 @@ class Tela:
                         
                 for text in arquivo_res:
                     pdf.set_font("Arial",size=10) # For paragraph text
-                    pdf.cell(w=0,h=10,txt=f'{text}', ln=1, align="L")
+                    pdf.multi_cell(0,10, text, 0,'J',False)
+                    #pdf.cell(w=0,h=10,txt=f'{text}', ln=1, align="L")
+                    
                     
                 for i in range(len(nomeArquivo)-4):
                     arqPDF += nomeArquivo[i]
