@@ -10,7 +10,7 @@ dados = pd.DataFrame({'Codigo': [1, 2, 3, 4, 5, 6],
     'edna.apmacedo', 'aprendendo.doinicio']})
 
 # a linha abaixo crio o nome do arquivo .xlsx
-nome_xlsx = 'usuarios_dados.xlsx'
+nome_xlsx = 'export_excel/usuarios_dados.xlsx'
 
 # a linha abaixo seta a exportação para excel, passando o nome do arquivo, indexação e cabeçalho
 dados.to_excel(nome_xlsx, index=False, header=True)
